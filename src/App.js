@@ -29,7 +29,6 @@ class App extends Component {
       label: response.data,
       load: false
     })
-
   }
 
   getRandomNumbers = async (event) => {
@@ -37,7 +36,7 @@ class App extends Component {
     this.setState({
       load: true
     })
-    let response = await axios.get(endpoint + "/getRandomNumber?totalDigits=1");
+    let response = await axios.get(endpoint + "/getRandomNumber?totalDigits=3");
     console.log(response)
     this.setState({
       number: response.data,
@@ -45,11 +44,13 @@ class App extends Component {
     })
   }
 
+  
+
   render() {
     return (
       <div className="masthead d-flex">
         <div className="container text-center my-auto">
-          <h1 className="mb-1">幸运大抽奖</h1>
+          <h1 className="mb-1">幸运大抽奖 大神上課好棒啊！！！</h1>
           <h3 className="mb-5">
             <em>一个前端ReactJs 后端Servless function 架构的牛逼随机数生成器</em>
           </h3>
